@@ -1,56 +1,47 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
-Figure 9. Sensitivity to canopy density in simulations with the Alptal 2004-2005 meteorology.
-(a) Fractions of total snowfall sublimating in simulations with the 16 canopy model configurations.
-(b) Contributions of net shortwave radiation, net longwave radiation and sensible heat fluxes to 
-energy for melting snow on the ground in simulations with linear interception, one canopy layer,
-Beer's Law radiative transfer and time/melt-dependent unloading.
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
+Figure 9. Maximum sub-canopy snow mass, duration of snow cover on the ground and fraction of total snowfall
+sublimating in the 16 Alptal forest simulations numbered in Table 1.
 """
 import matplotlib.pyplot as plt
-from matplotlib.ticker import MultipleLocator
 import numpy as np
 
 plt.rcParams['font.size'] = 20
 plt.rcParams['mathtext.fontset'] = 'cm'
 plt.rcParams['font.family'] = 'STIXGeneral'
-plt.figure(figsize=(12,6))
+fig = plt.figure(figsize=(7.35,6))
 
-ax1 = plt.subplot(121)
-data = np.loadtxt('Figure09a.dat')
-VAI = data[:,0]
-subl = data[:,1:]         
-for n in range(16):
-    ax1.plot(VAI,subl[:,n],'k')
-ax1.set_xlim(0,6)
-ax1.set_xticks(range(7))
-ax1.set_ylim(0,0.2)
-ax1.set_yticks([0,0.1,0.2])
-ax1.set_xlabel('Vegetation area index')
-ax1.set_ylabel('Fraction of snowfall sublimating')
-ax1.set_title('(a)')
-                
-ax2 = plt.subplot(122)
-data = np.loadtxt('Figure09b.dat')
-VAI = data[:,0]
-Sfrac = data[:,1]
-Lfrac = data[:,2]
-Hfrac = data[:,3] 
-Efrac = data[:,4] 
-Gfrac = data[:,5] 
-ax2.plot(VAI,Sfrac,'k',label='$SW_s$')
-ax2.plot(VAI,Lfrac,'k--',label='$LW_s$')
-ax2.plot(VAI,Hfrac,'k:',label='$H_s$')
-ax2.plot([0,6],[0,0],'k',lw=1)
-ax2.set_xlabel('Vegetation area index')
-ax2.set_xlim(0,6)
-ax2.set_xticks(range(7))
-ax2.set_ylim(-0.1,1.1)
-ax2.yaxis.set_minor_locator(MultipleLocator(0.1))
-ax2.set_ylabel('Fraction of melt energy')
-ax2.legend(labelspacing=0.3)
-ax2.set_title('(b)')
+table = np.loadtxt('Figure09.csv',delimiter=',')
+conf = table[:,0].astype(int)
+mass = table[:,1]
+durn = table[:,2]
+subl = table[:,3]
 
+plt.scatter(mass,durn,c=subl,vmin=0.1,vmax=0.16)
+plt.colorbar(label='Fraction of snowfall sublimating')
+
+plt.annotate('0',(mass[0],durn[0]-3),fontsize=14)
+plt.annotate('1',(mass[1]-2,durn[1]-3),fontsize=14)
+plt.annotate('2',(mass[2],durn[2]+1),fontsize=14)
+plt.annotate('3',(mass[3]-2,durn[3]+1),fontsize=14)
+plt.annotate('4',(mass[4],durn[4]-3),fontsize=14)
+plt.annotate('5',(mass[5]-2,durn[5]-3),fontsize=14)
+plt.annotate('6',(mass[6],durn[6]+1),fontsize=14)
+plt.annotate('7',(mass[7],durn[7]-3),fontsize=14)
+plt.annotate('8',(mass[8],durn[8]-3),fontsize=14)
+plt.annotate('9',(mass[9],durn[9]-3),fontsize=14)
+plt.annotate('10',(mass[10]-4,durn[10]-3),fontsize=14)
+plt.annotate('11',(mass[11],durn[11]+1),fontsize=14)
+plt.annotate('12',(mass[12]-4,durn[12]+1),fontsize=14)
+plt.annotate('13',(mass[13]-4,durn[13]+1),fontsize=14)
+plt.annotate('14',(mass[14],durn[14]+1),fontsize=14)
+plt.annotate('15',(mass[15],durn[15]+1),fontsize=14)
+
+plt.xlim(150,220)
+plt.xticks([160,170,180,190,200,210])
+plt.xlabel('Maximum snow mass (kg m$^{-2}$)')
+plt.ylabel('Snow cover duration (days)')
+plt.ylim(70,130)
 plt.tight_layout()
 plt.savefig('Figure09.pdf')
-
 

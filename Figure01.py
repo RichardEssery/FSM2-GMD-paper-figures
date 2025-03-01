@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 1. Heat capacity of snow-free canopies as functions of vegetation area index in MEB, MOSES, VISA and FSM2.
 Dots show heat capacities calculated using the method of Gouttevin et al. (2015) with leaf and stem area indices 
 for study sites collated by Todt et al. (2018).

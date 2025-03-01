@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 7. Simulations of (a) average sub-canopy wind speeds and (b) ratios between sub-canopy
 and open wind speeds, compared with measurements in 22 forest stands. Simulations with one and
 two canopy layers are indistinguishable.

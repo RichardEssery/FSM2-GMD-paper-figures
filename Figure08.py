@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 8. Simulations (lines) and observations (points) for the Alptal forest and meadow sites in 2004-2005.
 Albedo, transmission and longwave radiation fluxes are daily values. Subjective canopy snow load observations
 are scaled to the model's canopy capacity (dashed line in b).

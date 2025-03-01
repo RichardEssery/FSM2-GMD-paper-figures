@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 2. Shortwave radiation fluxes, sensible heat fluxes, temperatures and aerodynamic resistance
 in one-layer (left) and two-layer (right) canopy models. Arrows show the directions in which fluxes
 are defined to be positive. Longwave radiation and moisture fluxes are numbered and directed in the

@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 6. Simulations with one canopy layer (open circles) and two canopy layers (closed circles)
 of (a) average sub-canopy downwards longwave radiation and (b) canopy longwave enhancement, 
 compared with measurements in 10 forest stands.

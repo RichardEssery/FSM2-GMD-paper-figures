@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 4. Wind speeds above, within and below canopies with vegetation area indices
 (from right to left) 0, 0.5, 1, 2, 4 and 8.
 """

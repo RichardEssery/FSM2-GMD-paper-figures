@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 3. Canopy albedo and transmission of diffuse and direct-beam shortwave radiation calculated
 using Beer's Law and the two-stream approximation in 10,000 simulations with randomly selected values
 of $\alpha$ (0.1 - 0.8), $\theta$ (5 - 85$^\circ$), $f_{cs}$ (0 - 1) and $\Lambda$ (0 - 10).
@@ -17,7 +17,7 @@ plt.figure(figsize=(12,12))
 
 def bulk(agnd,elev,fcans,LAI,Sdif,Sdir):
     acn0 = 0.1
-    acns = 0.4
+    acns = 0.3
     acan = (1 - fcans)*acn0 + fcans*acns
     tdif = np.exp(-0.8*LAI)
     tdir = np.exp(-0.5*LAI/np.sin(elev))
@@ -32,7 +32,7 @@ def bulk(agnd,elev,fcans,LAI,Sdif,Sdir):
 
 def canel(agnd,elev,fcans,LAI,Sdif,Sdir):
     avg0 = 0.27
-    avgs = 0.77
+    avgs = 0.65
     aveg = (1 - fcans)*avg0 + fcans*avgs
     omega = aveg
     beta = 0.67

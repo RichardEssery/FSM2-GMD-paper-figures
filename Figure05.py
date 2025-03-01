@@ -1,5 +1,5 @@
 """
-A Flexible Snow Model (FSM 2.1.0) including a forest canopy
+A Flexible Snow Model (FSM 2.1.1) including a forest canopy
 Figure 5. Beer's Law (open circles) and two-stream approximation (closed circles) simulations
 of (a) average sub-canopy downwards shortwave radiation and (b) canopy shortwave transmission,
 compared with measurements in 10 forest stands.
